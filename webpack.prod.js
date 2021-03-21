@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 const path = require("path");
 
@@ -17,6 +18,17 @@ module.exports = {
     }),
     new MonacoWebpackPlugin({
       languages: ["json", "javascript", "cpp", "ruby"],
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "public", "_redirects"),
+          to: path.resolve(__dirname, "build"),
+        },
+      ],
+      options: {
+        concurrency: 100,
+      },
     }),
   ],
   resolve: {
