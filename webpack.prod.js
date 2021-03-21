@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      inject: true,
     }),
     new MonacoWebpackPlugin({
       languages: ["json", "javascript", "cpp", "ruby"],
