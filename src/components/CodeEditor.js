@@ -19,20 +19,19 @@ function CodeEditor({starter_code, id, language}) {
         e.preventDefault();
         API.postCode({code, language, id})
             .then(response => {
-                console.log(response);
                 if (response.results) {
                     setTestResults(JSON.parse(response.results));
                     setError(false);
                 }
                 if (response.error){
-                    setError(response.error);
+                    setError(response);
                     setTestResults(false);
                 }
             })
             .then(() =>{window.scrollTo(0, document.body.scrollHeight)} )
             .catch(errorPromise => {
-                if (errorPromise) errorPromise.then(setError);
                 setTestResults(false);
+                if (errorPromise) errorPromise.then(setError);
             })
     }
 
@@ -60,7 +59,7 @@ function CodeEditor({starter_code, id, language}) {
                 <Button negative onClick = {() => setErrorVisiblity(!errorVisiblity)}>Error</Button>
                 <br></br>
                 {errorVisiblity && <Segment>
-                    <strong>{error}</strong>
+                    <strong>{error.error}</strong>
                 </Segment>}
             </>
         )
