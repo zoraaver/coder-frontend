@@ -1,0 +1,9 @@
+# 3rd party libraries
+node_modules
+
+# production js/html files
+build
+
+# vscode settings
+.vscode
+
