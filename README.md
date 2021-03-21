@@ -1,4 +1,4 @@
-# Coder
+# [Coder](https://coderface.uk/)
 
 ![Screenshot 2021-03-20 at 16 04 23](https://user-images.githubusercontent.com/55952569/111876454-b635a200-8996-11eb-9bb8-64b929b537fc.png)
 
@@ -25,5 +25,3 @@ The following demo lessons have been completed to demonstrate the functionality 
 ### Solidify understanding of concepts by passing the tests:
 
 ![Screenshot 2021-03-20 at 16 08 17](https://user-images.githubusercontent.com/55952569/111876545-217f7400-8997-11eb-9fb0-4f51c743ac77.png)
-
-Check it out here: [coder](https://coderface.uk/)
